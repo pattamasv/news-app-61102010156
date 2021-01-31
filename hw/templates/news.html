@@ -1,0 +1,22 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+    <h1>News For You</h1>
+
+    <form>
+        <input type="text" name="news" placeholder="News Search">
+        <input type="submit" value="Submit">
+    </form>
+
+    {% for new, des, url in context %}
+
+    <h3>News: </h3> {{new}}
+    <h4>Description: </h4> {{des}}
+    <a href="{{url}}">Read more</a>
+    <hr>
+    {% endfor %}
+
+
+{% endblock %}
+
+
